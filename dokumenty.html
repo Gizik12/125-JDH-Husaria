@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device - width, inital - scale = 1.0">
+    <link href = "styles.css" rel = "stylesheet">
+    <title>125 JDH Husaria</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var timer1 = 0;
+        var timer2 = 0;
+        var timer3 = 0;
+        var numer = 1;
+        function ustawslajd(nrslajdu)
+        {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            numer = nrslajdu - 1;
+            schowaj();
+            timer3 = setTimeout("zmienslajd()",500);
+        }
+        function schowaj()
+        {
+            $("#slider").stop();
+            $("#slider").fadeOut(500);
+        }
+        function zmienslajd()
+        {
+            clearTimeout(timer3)
+            numer++;if (numer>5)numer=1;
+            var plik = "<img src=\"slajdy/slajd" + numer + ".jpg\"/>";
+            document.getElementById("slider").innerHTML=plik;
+            $("#slider").fadeIn(500);
+            timer1 = setTimeout("zmienslajd()",5000);
+            timer2 = setTimeout("schowaj()",4500)
+        }
+    </script> 
+</head>
+<body onload="zmienslajd()">
+    <img id = "menuZdjecie" src = "http://s.twojahistoria.pl/uploads/2017/10/Bitwa-pod-Kircholmem-Kossak.jpg" alt = "Bitwa pod kircholmem"/>
+    <div id="wrapper">
+        <div id = "background"></div>
+        <header>
+            <div id="foto">
+                <img src="logo.png" alt="logo druzyny" width="130" height="130">
+            </div>
+            <div id="title">
+                <h1>125 Jaczowska Drużyna Harcerzy "Husaria"</h1>
+            </div>
+        </header>
+        <section>
+            <img src="proporzec111.png" width="200" height="50" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden"><br>
+            <img src="proporzec111.png" width="200" class="jeden">
+            <div id="slider"></div>
+            
+            <br><a href = "zastepy.html" class = "menu" id ="zdjecia"><strong>Aktualności</strong></a><br><a href = "" class = "menu" id ="aktualnosci"><strong>Dołącz do nas!</strong></a><br><a href = "" 
+            class = "menu" id="no"><strong>Galeria</strong></a><br><a href = "" class = "menu" id="ch"><strong>Drużyna</strong></a><br><a 
+            href = "" class = "menu" id="na"><strong>1% na drużyne</strong></a><br><a href = "dokumenty.html" class = "menu" id="ni"><strong>Dokumenty</strong></a><br><a href = "" class = "menu" id="nr"><strong>Znajdż nas na:</strong></a>
+        </section>
+        <footer>
+            <h1 id="kontakt">Kontakt</h1><br>
+            <a class="ulica">Nr. drużynowego: 694 457 977</a><br>
+            <a class="ulica">Email: 125jdhhusaria@gmail.com</a><br>
+            <a href = "https://www.facebook.com/125JDH"target="_blank" src="facebook.png" class = "fb" id="fac"><img src="facebook.png"></a><br><a href = "https://www.youtube.com/channel/UCGLI1r2UrSmDJ7gkdK8vxjw" class = "fb" target="_blank" id="yt"><img src="youtube.png"></a>
+            
+            
+            
+            
+        </footer>
+    </div>
+</body>
+</html>
