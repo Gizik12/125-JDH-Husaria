@@ -5,41 +5,8 @@
     <meta name = "viewport" content = "width = device - width, inital - scale = 1.0">
     <link href = "styles.css" rel = "stylesheet">
     <title>125 JDH Husaria</title>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var timer1 = 0;
-        var timer2 = 0;
-        var timer3 = 0;
-        var numer = 1;
-        function ustawslajd(nrslajdu)
-        {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-            numer = nrslajdu - 1;
-            schowaj();
-            timer3 = setTimeout("zmienslajd()",500);
-        }
-        function schowaj()
-        {
-            $("#slider").stop();
-            $("#slider").fadeOut(500);
-        }
-        function zmienslajd()
-        {
-            clearTimeout(timer3)
-            numer++;if (numer>5)numer=1;
-            var plik = "<img src=\"slajdy/slajd" + numer + ".jpg\"/>";
-            document.getElementById("slider").innerHTML=plik;
-            $("#slider").fadeIn(500);
-            timer1 = setTimeout("zmienslajd()",5000);
-            timer2 = setTimeout("schowaj()",4500)
-        }
-    </script> 
 </head>
-<body onload="zmienslajd()">
+<body>
     <img id = "menuZdjecie" src = "http://s.twojahistoria.pl/uploads/2017/10/Bitwa-pod-Kircholmem-Kossak.jpg" alt = "Bitwa pod kircholmem"/>
     <div id="wrapper">
         <div id = "background"></div>
@@ -59,7 +26,6 @@
             <img src="proporzec111.png" width="200" class="jeden"><br>
             <img src="proporzec111.png" width="200" class="jeden"><br>
             <img src="proporzec111.png" width="200" class="jeden">
-            <div id="slider"></div>
             
             <br><a href = "zastepy.html" class = "menu" id ="zdjecia"><strong>Aktualności</strong></a><br><a href = "" class = "menu" id ="aktualnosci"><strong>Dołącz do nas!</strong></a><br><a href = "" 
             class = "menu" id="no"><strong>Galeria</strong></a><br><a href = "" class = "menu" id="ch"><strong>Drużyna</strong></a><br><a 
