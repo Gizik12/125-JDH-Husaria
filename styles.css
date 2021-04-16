@@ -94,7 +94,15 @@ section{
     top:76.6%;
     left:9.5%;
 }
+#karty{
+    position: absolute;
+    top: 10%;
+    right: 35%;
 
+}
+#karty a{
+    color: black;
+}
 
 
 .jeden{
